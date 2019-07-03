@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Questionnaire4.Models.Question>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Анкетирование</title>
+</head>
+<body>
+    <div>
+        <h3>Пожалуйста, введите свое имя и ответьте на вопросы ниже. Это очень важно!</h3>
+
+        <form method="post">
+            <p>Ваше имя:</p>
+            <input type="text" name="Name" />   
+            <hr>
+            <table>
+                @{int i = 1;
+                    @foreach (var q in Model)
+                    {
+                        <tr>
+                            <td><span>@i</span>. @q.QuestionText</td>
+                            <td><input type="text" name="Answer" /> </td>
+                            <td><input type="hidden" value="@q.QuestionId" name="QId" /><td>
+
+                        </tr>
+                        i++;
+                    }}
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
