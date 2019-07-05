@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Questionnaire4.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Questionnaire4.Models
+namespace Questionnaire4.Infrastructure
 {
     public class DBInitializer
     {

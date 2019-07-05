@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 
 namespace Questionnaire4.Models
 {
-    public class Person
+    public class Answer
     {
+        public int AnswerId { get; set; }
+        public string AnswerText { get; set; }
+
         public int PersonId { get; set; }
-        public string PersonName { get; set; }
+        public int QuestionId { get; set; }
+
     }
 }
